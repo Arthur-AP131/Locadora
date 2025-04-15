@@ -1,0 +1,62 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+.tabela{
+    width: 50%;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+  
+table {
+    margin-left: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+h1{
+    font-size: 20;
+    margin: 10;
+    margin-left: 10px;
+}
+
+p{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.botao{
+    border: none;
+    border-radius: 3px;
+    padding: 7px 20px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.botao:hover{
+    cursor: pointer;
+}
+
+.campo_veiculo{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.campo_modelo{
+    padding: 5px;
+}
+
+.campo_placa{
+    padding: 5px;
+}
+
+.campo_preco{
+    padding: 5px;
+}
+
+td{
+    text-align: center;
+}
