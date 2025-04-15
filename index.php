@@ -18,43 +18,28 @@ $consulta_estoque = mysqli_query($conexao, $query);
     <title>Cadastro de Veículos</title>
 </head>
 <body>
-    <h1>Cadastro de veículos</h1>
+    <nav>
+        <div class = "header">
+            <a href="index.php">
+                <img src="img/logo.png" alt="" class = "logo">
+                <p class = "logo-nome">risaCar</p>
+            </a>
+        </div>
+    </nav>
+<h1 class= formdesc>Cadastro de veículos</h1>
     <div class = 'formulario'>
+   
         <form method = 'post' action = 'processo.php'>
+            <h2>Nome</h2>
             <input type = 'text' name = 'veiculo' placeholder = 'Digite o nome do veículo' class = 'campo_veiculo'>
+            <h2>Modelo</h2>
             <input type = 'text' name = 'modelo' placeholder = 'Digite o modelo do veículo'class = 'campo_modelo'>
+            <h2>Placa</h2>
             <input type = 'text' name = 'placa' placeholder = 'Digite a placa'class = 'campo_placa'>
+            <h2>Preço</h2>
             <input type = 'number' name = 'prc_diario' placeholder = 'Digite o preço diário'class = 'campo_preco'>
             <input type = 'submit' value = 'Cadastrar veículo' class = 'botao'>
         </form>
-    </div>
-    <br><br>
-    <p>Veículos cadastrados</p>
-    <div class = 'tabela'>
-    <table>
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Modelo</th>
-                <th>Placa</th>
-                <th>Preço diário</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                while($linha = mysqli_fetch_array($consulta_estoque)){
-                    echo '<tr>';
-                        echo '<td>'.$linha['id_veiculo'].'</td>';
-                        echo '<td>'.$linha['nome_veiculo'].'</td>';
-                        echo '<td>'.$linha['modelo_veiculo'].'</td>';
-                        echo '<td>'.$linha['placa_veiculo'].'</td>';
-                        echo '<td>'.$linha['valor_diario'].'</td>';
-                    echo '</tr>';
-                }
-            ?>
-        </tbody>
-    </table>
     </div>
 </body>
 </html>
